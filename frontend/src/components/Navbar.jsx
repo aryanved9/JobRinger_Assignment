@@ -7,14 +7,18 @@ import { FaMoneyCheckAlt } from "react-icons/fa";
 
 function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between py-3 px-4 lg:px-12 bg-transparent">
+    <nav className="w-full flex items-center justify-between py-3 px-4 xl:px-12 bg-transparent">
       {/* Logo Section */}
       <div className="flex items-center">
-        <img src={logo} alt="Job Logo" className="w-28 h-auto" />
+        <img
+          src={logo}
+          alt="Job Logo"
+          className="w-24 h-auto sm:w-28 md:w-32"
+        />
       </div>
 
-      {/* Center Text*/}
-      <div className="text-center text-xl font-semibold tracking-wide text-gray-300 hidden lg:block">
+      {/* Center Text */}
+      <div className="hidden xl:block text-center text-xl font-semibold tracking-wide text-gray-300 flex-grow">
         BRINGING YOU{" "}
         <span className="bg-gradient-to-r from-purple-500 via-gray-400 to-blue-500 bg-clip-text text-transparent">
           THE PERFECT JOB
@@ -22,7 +26,7 @@ function Navbar() {
       </div>
 
       {/* Navigation Links */}
-      <div className="flex items-center gap-2 sm:gap-4 lg:gap-8 lg:flex-row flex-nowrap text-lg text-gray-400">
+      <div className="hidden xl:flex items-center gap-4 sm:gap-4 xl:gap-8 text-lg text-gray-400 mr-8">
         <a
           href="#"
           onClick={(e) => e.preventDefault()}
@@ -58,20 +62,23 @@ function Navbar() {
       </div>
 
       {/* Right Buttons */}
-      <div className="flex items-center gap-2 sm:gap-4">
+      <div className="flex items-center gap-4 sm:gap-4">
+        {/* Jobseeker and Employer Login */}
         <a
           href="#"
-          className="text-sm font-medium text-gray-400 hover:text-orange-400 transition-colors duration-300"
+          className="hidden xl:block text-sm font-medium text-gray-400 hover:text-orange-400 transition-colors duration-300"
         >
           Jobseeker Login
         </a>
         <a
           href="#"
-          className="text-sm font-medium text-gray-400 hover:text-orange-400 transition-colors duration-300"
+          className="hidden xl:block text-sm font-medium text-gray-400 hover:text-orange-400 transition-colors duration-300"
         >
           Employer Login
         </a>
-        <button className="ml-4 px-4 py-2 text-sm font-medium text-purple-500 border border-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition-colors duration-300 hidden lg:block">
+
+        {/* Get the App Button */}
+        <button className="ml-4 px-4 py-2 text-sm font-medium text-purple-500 border border-purple-500 rounded-full hover:bg-purple-500 hover:text-white transition-colors duration-300">
           GET THE APP
         </button>
       </div>
@@ -80,3 +87,5 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
